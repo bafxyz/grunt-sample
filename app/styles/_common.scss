@@ -265,3 +265,30 @@ button {
     text-align: center;
   }
 }
+
+.c-navigation {
+  background-color: #ccc;
+  clear: fix;
+  padding: 10px;
+
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+  }
+
+  li {
+    display: inline-block;
+    line-height: 1;
+    padding-right: 24px;
+    margin-bottom: 5px;
+
+    ul {
+      padding-left: 24px;
+      float: right;
+    }
+  }
+
+  a {
+    font-size: 14px;
+  }
+}
