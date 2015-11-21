@@ -1,0 +1,10 @@
+{
+  "name": "zooplus",
+  "version": "0.0.0",
+  "dependencies": {
+    "normalize-scss": "*",
+    "requirejs": "~2.1.22",
+    "jquery": "~2.1.4",
+    "sass-mediaqueries": "~1.6.1"
+  }
+}

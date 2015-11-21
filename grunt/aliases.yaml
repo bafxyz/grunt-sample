@@ -1,0 +1,11 @@
+default:
+  - 'copy'
+  - 'concurrent'
+  - 'postcss'
+  - 'requirejs'
+dev:
+  - 'clean'
+  - 'default'
+  - 'watch'
+serve:
+  - 'connect'

@@ -1,0 +1,267 @@
+// Common styles
+//==========================================================================
+
+// Mobile enhancements
+
+* {
+  // make transparent link selection, adjust last value opacity 0 to 1.0
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  // lets it scroll lazy
+  -webkit-overflow-scrolling: touch;
+}
+
+html,
+input,
+textarea,
+select,
+button {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Layout styles
+
+html {
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  overflow-x: hidden;
+  height: 100%;
+  color: #5f5f5f;
+}
+
+p {
+  font-size: 12px;
+}
+
+a {
+  color: #3c9700;
+}
+
+a,
+button {
+  &:hover,
+  &:active {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+.c-container {
+  margin: 0 auto;
+  max-width: 1024px;
+
+  @include mq($max-width: 640px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.c-header {
+  @include linear-gradient(to bottom, #66b100 0%, #338800 50%, #56a100 100%);
+  min-height: 40px;
+  text-align: center;
+}
+
+.c-nav {
+  clear: fix;
+  padding-top: 10px;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  li {
+    border-right: 2px solid #fff;
+    display: inline-block;
+    line-height: 1;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 5px;
+
+    &:last-of-type {
+      border: 0;
+      padding-right: 0;
+    }
+  }
+
+  a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  i {
+    margin-right: 5px;
+  }
+
+  &--header {
+    font-size: 18px;
+  }
+}
+
+.c-main {
+  &__inner {
+    padding: 20px 10px;
+  }
+}
+
+.c-breadcrumbs {
+  padding-bottom: 10px;
+
+  &__place {
+    font-weight: 600;
+  }
+
+  &__link {
+    color: #5f5f5f;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.c-main__cols {
+  clear: fix;
+}
+
+.c-main__col {
+  border-top: 1px solid #ccc;
+
+  @include mq($min-width: 641px) {
+    lost-column: 1/2;
+  }
+
+  &--checkout {
+    @include mq($min-width: 641px) {
+     lost-move: 1/2;
+    }
+  }
+
+  &--checkout,
+  &--sing-up {
+    background-color: #eee;
+  }
+}
+
+.c-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.c-teaser {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.c-form {
+  font-weight: 600;
+
+  &--sign-in {
+    margin-left: 15px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 18px;
+    padding: 5px;
+    min-width: 240px;
+
+    &:focus {
+      outline: 1px solid #3c9700;
+    }
+  }
+
+  &__forghot-pass {
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+}
+
+.c-button {
+  border: 0;
+  border-radius: 25px;
+  box-shadow: 2px 2px 4px #333;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+
+  &--grey {
+    @include linear-gradient(to bottom, #e6e6e6 0%, #ccc 50%, #aaa 100%);
+
+    &:hover {
+      @include linear-gradient(to bottom, #aaa 0%, #ccc 50%, #e6e6e6 100%);
+    }
+  }
+
+  &--orange {
+    @include linear-gradient(to bottom, #ff8800 0%, #dd7700 50%, #fd8600 100%);
+    margin-bottom: 100px;
+
+    &:hover {
+      @include linear-gradient(to bottom, #fd8600 0%, #dd7700 50%, #ff6600 100%);
+    }
+  }
+
+  &--green {
+    @include linear-gradient(to bottom, #66b100 0%, #338800 50%, #56a100 100%);
+
+    &:hover {
+      @include linear-gradient(to bottom, #56a100 0%, #338800 50%, #66b100 100%);
+    }
+  }
+
+  &--sign-up {
+    min-width: 124px;
+  }
+}
+
+.c-sign-up__points {
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  i {
+    color: #3c9700;
+    margin-right: 5px;
+  }
+}
+
+.c-footer {
+  padding-bottom: 20px;
+
+  &__bg {
+    background-color: #3c9700;
+    margin-bottom: 10px;
+    min-height: 40px;
+    text-align: center;
+  }
+}
